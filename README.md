@@ -76,7 +76,6 @@ pip install -r requirements.txt
 2. **Environment Variables**
 ```bash
 cp .env.example .env
-# Edit .env with your API keys
 ```
 
 3. **Train ML Model**
@@ -100,7 +99,6 @@ npm install
 2. **Environment Variables**
 ```bash
 cp .env.example .env
-# Edit .env with your Supabase URL and keys
 ```
 
 3. **Start Frontend**
