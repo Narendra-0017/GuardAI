@@ -15,4 +15,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
+  ]
 }
