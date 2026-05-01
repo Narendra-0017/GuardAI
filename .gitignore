@@ -1,0 +1,17 @@
+# frontend
+frontend/node_modules/
+
+
+# backend
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# env
+.env
+frontend/.env
+frontend/.env.local
+backend/.env
+
+# datasets (IMPORTANT)
+backend/ml/creditcard.csv

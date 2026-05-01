@@ -1,0 +1,30 @@
+{
+  "validation_auc": 0.9999999999999999,
+  "test_auc": 0.9999812865497075,
+  "validation_accuracy": 0.998,
+  "test_accuracy": 0.9986666666666667,
+  "feature_importance": {
+    "hour_of_day": 0.4708709418773651,
+    "day_of_week": 0.00592565955594182,
+    "merchant_category": 0.0021447271574288607,
+    "card_present": 0.005589944776147604,
+    "distance_from_home": 0.018488667905330658,
+    "transactions_last_hour": 0.0944909155368805,
+    "age_of_account": 0.29132214188575745,
+    "is_foreign": 0.0,
+    "is_high_risk_country": 0.000590046402066946,
+    "amount_log": 0.014856099151074886,
+    "amount_per_transaction": 0.002944322070106864,
+    "risk_score": 0.09277650713920593
+  },
+  "best_params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "n_estimators": 200,
+    "subsample": 0.8
+  },
+  "training_samples": 7000,
+  "validation_samples": 1500,
+  "test_samples": 1500
+}

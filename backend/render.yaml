@@ -1,0 +1,29 @@
+services:
+  # FastAPI Backend Service
+  - type: web
+    name: guardai-backend
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11
+    healthCheckPath: /health
+    autoDeploy: true
+    
+  # ChromaDB Service (if needed for production)
+  - type: pserv
+    name: guardai-chromadb
+    runtime: python
+    plan: free
+    startCommand: "python -m chromadb.cli.server --host 0.0.0.0 --port 8001 --path ./chroma_db"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
